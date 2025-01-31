@@ -1,0 +1,132 @@
+.main .main-banner__inner {
+     background-image: url("../images/banner.jpg");
+	background-size: cover;
+	background-position: center;
+	padding: 14.375rem 0 4.0625rem 0;
+}
+
+/* .main .main-banner__inner ::before,
+.main .main-banner__inner ::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+} */
+
+.main .main-banner__inner ::before {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    opacity: 0.5; /* Это придает прозрачность для эффектов */
+  }
+  
+  .main .main-banner__inner ::after {
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    opacity: 0.5;
+  }
+
+@media only screen and (min-width: 768px) {
+	.main .main-banner__inner {
+		padding: 21.875rem 0 4.6875rem 0
+	}
+}
+
+.main .main-banner__title {
+	font-size: 3rem;
+	color: var(--color-white);
+	text-align: center
+}
+
+.main .main-banner__title--colored {
+	color: var(--color-yelloy)
+}
+
+@media only screen and (min-width: 992px) {
+	.main .main-banner__title {
+		font-size: 6.25rem;
+		line-height: 7.25rem
+	}
+}
+
+.main .main-banner__subtitle {
+	font-size: 1.5rem;
+	line-height: 2rem;
+	color: var(--color-white);
+	text-align: center
+}
+
+.main .main-banner .button {
+	margin-top: 6.25rem;
+	padding: 1.3125rem 0;
+	font-size: 1rem;
+	line-height: 1.1875rem;
+	font-weight: 600;
+	color: var(--color-dark-gray)
+}
+.main-block {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 30px;
+	padding: 40px 0;
+}
+
+
+
+.main-block__text {
+
+	font-size: 1.6rem;
+	font-weight: 500;
+	line-height: 1.8rem;
+	color: var(--color-dark-gray);
+}
+
+.main-block__item{
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	color: var(--color-secondary);
+	text-align: center;
+}
+.main-block__item h3 {
+	font-size: 3rem;
+	line-height: normal;
+	margin: 0;
+}
+.main-block__item p {
+	
+	font-weight: 500;
+	margin: 0;
+
+}
+
+
+
+@media only screen and (min-width: 768px) {
+	.main .main-banner .button {
+		padding: 1.4375rem 0;
+		font-size: 1.5rem;
+		line-height: 2rem
+	}
+}
+@media only screen and (max-width: 580px) {
+	.main-block__text{
+		text-align: center;
+	}
+	
+	.main-block {
+	flex-direction: column;
+	gap: 12px;
+	}
+	.main-block__item h3 {
+		
+		line-height: 1.2;
+	}
+	.main-block__item{
+		
+		gap: 0;
+	}
+	
+}

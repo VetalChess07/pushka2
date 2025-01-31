@@ -1,0 +1,106 @@
+.gallery{
+    background-color: var(--color-dark-gray);
+    padding: 20px 0 80px 0;
+    margin-top: 40px;
+}
+.gallery__title{
+    color: var(--color-white);
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2rem;
+}
+
+.swiper {
+    width: 100%;
+    height: 550px; /* Задай высоту слайдера */
+ 
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Стили для обертки слайдов */
+  .swiper-wrapper {
+    display: flex;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Стили для каждого слайда */
+  .swiper-slide {
+    min-width: 100%; /* Каждый слайд занимает 100% ширины контейнера */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3; /* Цвет фона слайда */
+    font-size: 2rem;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Навигационные кнопки */
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  
+  .swiper-button-next {
+    right: 10px;
+  }
+  
+  .swiper-button-prev {
+    left: 10px;
+  }
+  
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 12px;
+  }
+  
+  /* Стили для скроллбара */
+  .swiper-scrollbar {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+  
+  .swiper-scrollbar .swiper-scrollbar-drag {
+    background-color: #ff4081;
+    border-radius: 5px;
+  }
+  
+  @media (max-width: 980px) {
+    .swiper {
+        height: 450px; /* Задай высоту слайдера */
+      
+      }
+     
+}
+
+
+@media (max-width: 780px) {
+    .swiper {
+        height: 300px; /* Задай высоту слайдера */
+      
+      }
+}
+

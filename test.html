@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .button {
+            position: relative;
+            padding: 1rem 2rem;
+            background-color: blue;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            border-radius: 1rem;
+            cursor: pointer;
+        } */
+
+        .border-decor {
+            width: 1rem;
+            height: 1rem;
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            aspect-ratio: 1;
+            background-image: radial-gradient(circle at 100% 100%, transparent 1rem, red calc(1rem + 1px));
+            rotate: -90deg;
+            border-radius: 50%; /* добавлено закругление */
+        }
+    </style>
+</head>
+<body>
+    <button class="button">
+        Click Me
+        <div class="border-decor"></div>
+    </button>
+</body>
+</html>

@@ -1,0 +1,56 @@
+
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/Roboto-UltraLight.ttf") format("truetype"), url("../fonts/Roboto-key.ttf");
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/Roboto-Light.ttf") format("truetype"), url("../fonts/Roboto-key.ttf");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/Roboto-Regular.ttf") format("truetype"), url("../fonts/Roboto-key.ttf");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/Roboto-Medium.ttf") format("truetype"), url("../fonts/Roboto-key.ttf");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/Roboto-Bold.ttf") format("truetype"), url("../fonts/Roboto-key.ttf");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap
+}
+
+@font-face {
+	font-family: "Taurus-Light";
+	src: url("../fonts/Taurus-Light.woff2") format("woff2"), url("../fonts/Taurus-Light.woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap
+}
+
+@font-face {
+	font-family: "Taurus";
+	src: url("../fonts/Taurus-Normal.woff2") format("woff2"), url("../fonts/Taurus-Normal.woff");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap
+}
