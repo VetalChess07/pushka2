@@ -12,9 +12,9 @@
 
 .finishing__list{
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     align-self: center;
-    height: auto;
+    
     gap: 20px;
    
 }
