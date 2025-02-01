@@ -3,6 +3,8 @@
 	background-size: cover;
 	background-position: center;
 	padding: 14.375rem 0 4.0625rem 0;
+	height: 100dvh;
+	position: relative;
 }
 
 /* .main .main-banner__inner ::before,
@@ -33,27 +35,24 @@
 }
 
 .main .main-banner__title {
-	font-size: 3rem;
+	font-size: 2.8rem;
+	line-height: 2.8rem;
 	color: var(--color-white);
-	text-align: center
+	max-width: 500px;
+	font-style: italic;
 }
 
 .main .main-banner__title--colored {
 	color: var(--color-yelloy)
 }
 
-@media only screen and (min-width: 992px) {
-	.main .main-banner__title {
-		font-size: 6.25rem;
-		line-height: 7.25rem
-	}
-}
 
 .main .main-banner__subtitle {
-	font-size: 1.5rem;
-	line-height: 2rem;
+	font-size: 1.2rem;
+	line-height: 1.2rem;
 	color: var(--color-white);
-	text-align: center
+	margin: 40px 0;
+	max-width: 500px;
 }
 
 .main .main-banner .button {
@@ -101,8 +100,58 @@
 	margin: 0;
 
 }
+.main-banner__img{
+	display: none;
+}
 
+.main-banner__contacts{
+	position: absolute;
+	bottom: 90px;
+	left: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	color: var(--color-ligth-blue);
+	font-size: 1.2rem;
+	text-transform: uppercase;
+}
+.main-banner__catalog{
+	position: absolute;
+	bottom: 90px;
+	right: 20px;
+	width: 100px;
+	height: 100px;
+}
 
+.main-banner__contacts-icon{
+	width: 64px;
+	height: 64px;
+}
+.main-banner__contacts-text{
+	margin: 0;
+	font-weight: 700;
+}
+
+@media only screen and (max-width: 1200px) {
+	.main-banner .container {
+		max-width: none;
+	}
+	
+}
+@media only screen and (max-width: 980px) {
+	.main-banner__img{
+		display: block;
+		margin: 0 auto 30px auto;
+	}
+	.main .main-banner__inner{
+		padding: 40px 0 ;
+	}
+	.main-banner__img {
+		width: 120px;
+		margin: 0 auto 70px auto;
+
+	}
+}
 
 @media only screen and (min-width: 768px) {
 	.main .main-banner .button {
@@ -110,23 +159,33 @@
 		font-size: 1.5rem;
 		line-height: 2rem
 	}
+	
+
 }
 @media only screen and (max-width: 580px) {
 	.main-block__text{
 		text-align: center;
+	}
+	.main .main-banner__subtitle{
+		margin: 25px 0 50px 0;
+	}
+	.main .main-banner__title{
+		font-size: 2.4rem;
+		line-height: 2.4rem;
 	}
 	
 	.main-block {
 	flex-direction: column;
 	gap: 12px;
 	}
-	.main-block__item h3 {
-		
+	.main-block__item h3 {	
 		line-height: 1.2;
 	}
 	.main-block__item{
-		
 		gap: 0;
 	}
 	
+	.main-banner .container {
+		text-align: center;
+	}
 }

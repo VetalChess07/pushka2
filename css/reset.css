@@ -490,13 +490,15 @@ p {
 .button-border {
 	width: fit-content;
 	background: var(--color-secondary);
-	padding: 8px 20px;
+	padding: 12px 20px;
 	border-radius: 20px 0 20px 20px;
 	color: var(--color-white);
-	font-size: 2rem;
+	font-size: 1.2rem;
 	font-weight: 300;
 	transition: all .5s;
 	text-align: center;
+	border: none;
+	font-family: "Taurus", sans-serif;
 }
 .button-border:hover {
 	background: var(--color-white);	

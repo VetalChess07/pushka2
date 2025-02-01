@@ -1,0 +1,53 @@
+!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бургер-меню</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f8f8;
+        }
+        .burger {
+            width: 40px;
+            height: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        .burger span {
+            display: block;
+            height: 5px;
+            background: black;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+        .burger.active span:nth-child(1) {
+            transform: translateY(12px) rotate(45deg);
+        }
+        .burger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .burger.active span:nth-child(3) {
+            transform: translateY(-12px) rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="burger" id="burger">
+        <span style="width: 100%;"></span>
+        <span style="width: 100%;"></span>
+        <span style="width: 100%;"></span>
+    </div>
+    <script>
+        document.getElementById('burger').addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

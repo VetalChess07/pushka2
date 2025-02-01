@@ -15,3 +15,29 @@ const swiper = new Swiper('.swiper', {
     },
   });
   
+
+  const burger =document.getElementById('burger')
+  const body = document.querySelector('body')
+  const visible = document.querySelector('.visible')
+  console.log(visible)
+
+  burger.addEventListener('click', function() {
+    burger.classList.toggle('active');
+
+    const hasClass = burger.classList.contains('active')
+    console.log(hasClass)
+    if(!hasClass){
+      body.classList.remove('show-mobile')
+      body.classList.remove('lock-screen')
+      visible.classList.remove('active')
+    }
+    else {
+      body.classList.add('show-mobile')
+      body.classList.add('lock-screen')
+      visible.classList.add('active')
+
+    }
+   
+
+
+});

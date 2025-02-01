@@ -1,7 +1,8 @@
 body.lock-screen {
 	overflow: hidden;
 	-ms-touch-action: none;
-	touch-action: none
+	touch-action: none;
+	z-index: 1000;
 }
 
 body.show-mobile .mobile-menu {
@@ -9,12 +10,48 @@ body.show-mobile .mobile-menu {
 	-ms-transform: translateX(-100%);
 	transform: translateX(-100%)
 }
+.visible{
+	-webkit-transform: translateX(-300%);
+	-ms-transform: translateX(-300%);
+	transform: translateX(-300%);
+	padding: 1.875rem 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 100vw;
+    overflow-y: auto;
+    width: 100%;
+    max-width: 50dvw;
+    background-color: rgba(0, 0, 0, .5);
+    -webkit-transition: width .5s ease, -webkit-transform .5s ease;
+    transition: width .5s ease, -webkit-transform .5s ease;
+    transition: transform .5s ease, width .5s ease;
+    transition: transform .5s ease, width .5s ease, -webkit-transform .5s ease;
+    z-index: 103;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border: 1px solid #000;
+}
 
-@media only screen and (max-width: 992px) {
+.visible.active{
+	-webkit-transform: translateX(-200%);
+	-ms-transform: translateX(-200%);
+	transform: translateX(-200%);
+	
+}
+
+@media only screen and (max-width: 1000px) {
 	body.show-mobile .mobile-menu {
 		-webkit-transform: translateX(-100%);
-		-ms-transform: translateX(-100%);
-		transform: translateX(-100%)
+	-ms-transform: translateX(-100%);
+	transform: translateX(-100%)
 	}
 }
 
@@ -57,12 +94,36 @@ body.show-mobile .mobile-menu {
 	display: none
 }
 
-@media only screen and (min-width: 768px) {
+.header__item {
+	
+}
+.header__item-block{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.header__item-icon {
+	
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		left: -35px;
+	
+}
+
+@media only screen and (min-width: 980px) {
 	.header__items {
+		width: 100%;
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
-		gap: 1.5rem
+		gap: 1.5rem;
+		justify-content: space-between;
+	}
+	.header__logo {
+		width: 9.875rem;
+		height: 10.375rem
 	}
 }
 
@@ -71,19 +132,36 @@ body.show-mobile .mobile-menu {
 	height: 6.125rem
 }
 
-@media only screen and (min-width: 768px) {
-	.header__logo {
-		width: 9.875rem;
-		height: 10.375rem
-	}
-}
 
 .header__menu {
-	fill: var(--color-white);
-	cursor: pointer
+	width: 40px;
+	height: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+	z-index: 104;
+	position: fixed;
+	right: 30px;
+}
+.header__menu span {
+	display: block;
+	height: 5px;
+	background: black;
+	transition: 0.3s;
+	border-radius: 5px;
+}
+.header__menu.active span:nth-child(1) {
+	transform: translateY(12px) rotate(45deg);
+}
+.header__menu.active span:nth-child(2) {
+	opacity: 0;
+}
+.header__menu.active span:nth-child(3) {
+	transform: translateY(-12px) rotate(-45deg);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 980px) {
 	.header__menu {
 		display: none
 	}
@@ -97,6 +175,7 @@ body.show-mobile .mobile-menu {
 	left: 100vw;
 	overflow-y: auto;
 	width: 100%;
+	max-width: 50dvw;
 	background-color: #fff;
 	-webkit-transition: width .5s ease, -webkit-transform .5s ease;
 	transition: width .5s ease, -webkit-transform .5s ease;
@@ -111,7 +190,8 @@ body.show-mobile .mobile-menu {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
-	flex-direction: column
+	flex-direction: column;
+	border: 1px solid #000;
 }
 
 .mobile-menu__logo {
@@ -144,7 +224,8 @@ body.show-mobile .mobile-menu {
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-	text-align: center
+	text-align: center;
+	margin-top: 50px;
 }
 
 .mobile-menu__item {
@@ -152,7 +233,8 @@ body.show-mobile .mobile-menu {
 	font-weight: 400;
 	line-height: 1.5rem;
 	text-transform: uppercase;
-	color: #000
+	color: #000;
+	
 }
 
 .mobile-menu__items {
@@ -165,4 +247,16 @@ body.show-mobile .mobile-menu {
 	-ms-flex-direction: column;
 	flex-direction: column;
 	gap: 1.5rem
+}
+
+@media (max-width:1200px) {
+	.header .container{
+		max-width: none;
+	}
+}
+@media (max-width:980px) {
+	.header .container{
+		max-width: none;
+	}
+	
 }

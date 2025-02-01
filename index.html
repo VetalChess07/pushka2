@@ -28,33 +28,42 @@
 </head>
 
 <body>
+    <div class="visible"></div>
     <!-- header -->
     <header class="header">
         <div class="container">
             <div class="header__inner">
                 <nav class="header__items">
+                    <div class="header__logo">
+                        <img class="header__logo-img" src="./images/logo.png" alt="">
+                    </div>
                     <div class="header__item">
                         <a class="header__item-link" href="#">Выбрать квартиру</a>
                     </div>
                     <div class="header__item">
                         <a class="header__item-link" href="#">О комплексе</a>
                     </div>
-                </nav>
-                <div class="header__logo">
-                    <img class="header__logo-img" src="./images/logo.png" alt="">
-                </div>
-                <nav class="header__items">
                     <div class="header__item">
                         <a class="header__item-link" href="#">Как купить</a>
                     </div>
                     <div class="header__item">
                         <a class="header__item-link" href="#">Контакты</a>
                     </div>
+                    <div class="header__item">
+                        <div class="header__item-block">
+                            <img src="./images/галочка.svg" class="header__item-icon" alt="">
+                            <a class="footer__number" href="tel:+7(912)235-17-43">+7 (912) 235-17-43</a>
+                            <a class="footer__number" href="tel:+7(912)235-17-43">+7 (912) 235-17-43</a>
+                        </div>
+
+                    </div>
                 </nav>
-                <div class="header__menu">
-                    <svg role="img" width="30" height="30">
-                        <use xlink:href="svg/symbol/svg-symbols.svg#menu"></use>
-                    </svg>
+
+
+                <div id="burger" class="header__menu">
+                    <span style="width: 100%;"></span>
+                    <span style="width: 100%;"></span>
+                    <span style="width: 100%;"></span>
                 </div>
             </div>
         </div>
@@ -64,15 +73,8 @@
     <!-- mobile-menu -->
     <aside>
         <nav class="mobile-menu">
-            <div class="container">
-                <div class="mobile-menu__header">
-                    <img class="mobile-menu__logo" src="./images/logodark.png" alt="">
-                    <div class="mobile-menu__close">
-                        <svg role="img" width="30" height="30">
-                            <use xlink:href="svg/symbol/svg-symbols.svg#close"></use>
-                        </svg>
-                    </div>
-                </div>
+          
+                
                 <div class="mobile-menu__body">
                     <nav class="mobile-menu__items">
                         <div class="mobile-menu__item">
@@ -89,7 +91,7 @@
                         </div>
                     </nav>
                 </div>
-            </div>
+            
         </nav>
     </aside>
     <!-- mobile-menu end -->
@@ -99,14 +101,28 @@
         <!-- main-banner section -->
         <section class="main-banner">
             <div class="main-banner__inner">
-                <div class="container">
+                <div class="main__container container">
                     <div class="main-banner__title-wrapper">
-                        <h1 class="main-banner__title">Жилой комплекс <span
-                                class="main-banner__title--colored">“пушка”</span></h1>
-                        <p class="main-banner__subtitle">Твой новый уровень комфорта и уюта.</p>
+                        <img class="main-banner__img" src="./images/logo.png" alt="">
+
+                        <h1 class="main-banner__title">Будь на высоте, выбирай перспективу!</h1>
+                        <p class="main-banner__subtitle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+                            nesciunt modi enim. Aliquam iure sed sunt alias, pariatur eligendi error dolores, vel
+                            voluptas suscipit delectus odit. Nostrum doloribus esse quia..</p>
                     </div>
-                    <button class="button">Подбор квартир</button>
+                    <button class=" button-border">Подбор квартир</button>
                 </div>
+                <div class="main-banner__contacts">
+                    <img src="./images/галочка.svg" class="main-banner__contacts-icon" alt="">
+                    <p class="main-banner__contacts-text">Свяжитесь с нами</p>
+                    <a class="main-banner__contacts-tel" href="tel:+7(912)235-17-43">+7 (912) 235-17-43</a>
+                    <a class="main-banner__contacts-tel" href="tel:+7(912)235-17-43">+7 (912) 235-17-43</a>
+
+                </div>
+                <a href="" class="main-banner__catalog">
+                    <img src="./images/галочка.svg" class="main-banner__contacts-icon" alt="">
+                    
+                </a>
             </div>
             <div class="container">
                 <div class="main-block">
@@ -334,7 +350,8 @@
                                         <h6 class="">Ипотека от <br> застройщика</h6>
                                     </div>
                                     <p class="how-buy__folder-procent how-buy__folder-procent--yelloy">от
-                                        <span>12%</span></p>
+                                        <span>12%</span>
+                                    </p>
                                 </div>
 
                             </div>
@@ -359,16 +376,17 @@
                     <div class="how-buy__conditions">
                         <p class="how-buy__conditions-title">Приобрести квартиру можно
                             по государственным программам</p>
-                            <div class="how-buy__block">
-                                <ul class="how-buy__conditions-wrapper">
-                                    <li class="how-buy__conditions-item list-item ">Семейная ипотека от 6% емейная ипотека от 6%</li>
-                                    <li class="how-buy__conditions-item list-item ">Семейная ипотека от 6%</li>
-                                    <li class="how-buy__conditions-item list-item ">Семейная ипотека от 6%</li>
-                                    <li class="how-buy__conditions-item list-item ">Семейная ипотека от 6%</li>
-                                </ul>
-                            </div>
-                            
-                        
+                        <div class="how-buy__block">
+                            <ul class="how-buy__conditions-wrapper">
+                                <li class="how-buy__conditions-item list-item ">Семейная ипотека от 6% емейная ипотека
+                                    от 6%</li>
+                                <li class="how-buy__conditions-item list-item ">Семейная ипотека от 6%</li>
+                                <li class="how-buy__conditions-item list-item ">Семейная ипотека от 6%</li>
+                                <li class="how-buy__conditions-item list-item ">Семейная ипотека от 6%</li>
+                            </ul>
+                        </div>
+
+
 
                     </div>
                 </div>
@@ -407,18 +425,20 @@
                         <input class="feedback__form-input" type="text" placeholder="+7(___)___-__-__">
                         <input class="feedback__form-input" type="text" placeholder="E-mail">
                         <label for="privacy-policy" class="feedback__form-policy">
-                            <input id="privacy-policy" class="privacy-policy-checkbox" type="checkbox"> Нажимая кнопку Вы даете согласие на <a href="#">обработку персональных данных</a> и с условием <a href="">пользовательского соглашения</a> 
-                         </label>
-                         <button class="feedback__form-submit button">Отправить</button>
+                            <input id="privacy-policy" class="privacy-policy-checkbox" type="checkbox"> Нажимая кнопку
+                            Вы даете согласие на <a href="#">обработку персональных данных</a> и с условием <a
+                                href="">пользовательского соглашения</a>
+                        </label>
+                        <button class="feedback__form-submit button">Отправить</button>
                     </form>
-                   
+
                 </div>
             </div>
         </section>
         <!-- feedback section end -->
 
         <!-- contacts section -->
-       
+
         <!-- contacts section end -->
         <!-- copyright section -->
         <section class="copyright">
@@ -442,17 +462,18 @@
     <footer class="footer">
         <div class="footer__container container">
             <div class="footer__inner">
-               
+
                 <nav class="footer__items">
                     <div class="footer__logo footer__item">
                         <img class="footer__logo-img" src="./images/logodark.png" alt="">
                     </div>
                     <div class="footer__item">
                         <h3 class="footer__item-title">Контакты</h3>
-                        <p class="footer__item-text">Офисы продаж <br> г.Каменск-Уральск, ул Октябрьская 45/1, офис 19 </p>
+                        <p class="footer__item-text">Офисы продаж <br> г.Каменск-Уральск, ул Октябрьская 45/1, офис 19
+                        </p>
                     </div>
                     <div class="footer__item">
-                        
+
                         <p class="footer__item-text">E-mail: <br>novostroika_kamensk@gmail.ru</p>
                     </div>
                     <div class="footer__item footer__item-contacts">
@@ -460,12 +481,12 @@
                             <img src="./images/галочка.svg" class="footer__contacts-icon" alt="">
                             <a class="footer__number" href="tel:+7(912)235-17-43">+7 (912) 235-17-43</a>
                             <a class="footer__number" href="tel:+7(912)235-17-43">+7 (912) 235-17-43</a>
-                            
+
                         </div>
-                      
+
                     </div>
                 </nav>
-               
+
             </div>
         </div>
     </footer>
