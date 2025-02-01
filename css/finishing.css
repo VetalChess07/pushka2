@@ -24,11 +24,9 @@
     gap: 20px;
 }
 .finishing__list-item{
-    list-style: none; /* Убираем исходные маркеры */
-    background: url("../images/галочка.svg") no-repeat 0 50%; /* Параметры фона */
-    padding-left: 24px; 
+   
     font-size: 1.2rem;
-    background-size: 18px 18px;
+   
 }
 
 @media (max-width: 980px) {

@@ -93,14 +93,44 @@
         height: 450px; /* Задай высоту слайдера */
       
       }
+      .swiper-slide__img{
+        width: 100%;
+        max-width: 900px;
+        object-fit: cover;
+      }
      
 }
 
 
 @media (max-width: 780px) {
     .swiper {
-        height: 300px; /* Задай высоту слайдера */
+      height: 100%; /* Задай высоту слайдера */
       
       }
+     
+      .gallery{
+        padding: 20px 0;
+        margin-top: 20px;
+      }
+}
+
+
+@media (max-width: 540px) {
+  
+    .swiper-slide__img{
+      height: 280px;
+    }
+    .gallery{
+      padding: 20px 0;
+      margin-top: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+  
+  .swiper-slide__img{
+    height: 200px;
+  }
+ 
 }
 
