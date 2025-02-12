@@ -1,0 +1,141 @@
+
+html,
+body {
+	height: 100%
+}
+
+body {
+	background-color: var(--color-white);
+	font-family: "Roboto", sans-serif;
+	color: var(--color-black);
+	font-size: 14px;
+	min-width: 300px;
+	font-weight: 400;
+	width: 100%;
+	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column
+}
+
+
+
+
+
+
+
+.main .partners {
+	padding: 1rem 0
+}
+
+@media only screen and (min-width: 992px) {
+	.main .partners {
+		padding: 3.125rem 0
+	}
+}
+
+.main .partners__inner {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	gap: 0.9375rem;
+	padding: 1rem 0
+}
+
+@media only screen and (min-width: 992px) {
+	.main .partners__inner {
+		padding: 3rem 0
+	}
+}
+
+.main .partners__item {
+	margin: 0 auto;
+	text-align: center
+}
+
+@media only screen and (min-width: 576px) {
+	.main .partners__item {
+		-webkit-box-flex: 45%;
+		-ms-flex: 45%;
+		flex: 45%
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.main .partners__item {
+		-webkit-box-flex: 23%;
+		-ms-flex: 23%;
+		flex: 23%
+	}
+}
+
+
+
+
+
+.button {
+	font-size: 1.125rem;
+	line-height: 1.4375rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-align: center;
+	background-color: var(--color-yelloy);
+	color: var(--color-dark-gray);
+	border-radius: 3.125rem;
+	padding: 0.625rem 0;
+	border: 0;
+	width: 100%;
+	-webkit-transition: .3 all;
+	transition: .3 all
+}
+
+.button:hover {
+	-webkit-filter: brightness(1.1);
+	filter: brightness(1.1)
+}
+
+.section__title {
+	font-family: "Taurus", sans-serif;
+	text-align: center;
+	color: var(--color-dark-gray);
+	font-size: 3rem
+}
+
+@media only screen and (min-width: 992px) {
+	.section__title {
+		font-size: 6.25rem;
+		line-height: 7.25rem
+	}
+}
+
+.button--blue {
+	background-color: var(--color-blue);
+	color: var(--color-white);
+	margin-top: 0.625rem
+}
+
+@media only screen and (min-width: 992px) {
+	.button--blue {
+		margin-top: 1rem
+	}
+}
+
+a {
+	-webkit-transition: .3s all;
+	transition: .3s all
+}
+
+a:hover {
+	color: var(--color-blue)
+}
