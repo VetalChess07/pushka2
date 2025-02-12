@@ -1,22 +1,14 @@
+
 .main .main-banner__inner {
-     background-image: url("../images/banner.jpg");
+    
 	background-size: cover;
 	background-position: center;
 	padding: 14.375rem 0 4.0625rem 0;
 	height: 100dvh;
 	position: relative;
-}
+	
 
-/* .main .main-banner__inner ::before,
-.main .main-banner__inner ::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: inherit;
-} */
+}
 
 .main .main-banner__inner ::before {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
@@ -72,6 +64,27 @@
 	padding: 40px 0;
 }
 
+.main-banner__img-back{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	mask-image: url('../images/1.svg');
+	-webkit-mask-image: url('../images/1.svg');
+	object-fit: cover;
+	object-fit: cover;
+	mask-repeat: no-repeat;
+	-webkit-mask-repeat: no-repeat;
+  
+	mask-position: center;
+	-webkit-mask-position: center;
+  
+	mask-size: cover;
+	-webkit-mask-size: cover;
+	z-index: -1;
+}
 
 
 .main-block__text {
@@ -104,17 +117,9 @@
 	display: none;
 }
 
-.main-banner__contacts{
-	position: absolute;
-	bottom: 90px;
-	left: 20px;
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-	color: var(--color-ligth-blue);
-	font-size: 1.2rem;
-	text-transform: uppercase;
-}
+
+
+
 .main-banner__catalog{
 	position: absolute;
 	bottom: 90px;
@@ -122,15 +127,10 @@
 	width: 100px;
 	height: 100px;
 }
+.main-banner__contacts{
+	display: none;
+}
 
-.main-banner__contacts-icon{
-	width: 64px;
-	height: 64px;
-}
-.main-banner__contacts-text{
-	margin: 0;
-	font-weight: 700;
-}
 
 @media only screen and (max-width: 1200px) {
 	.main-banner .container {
@@ -139,6 +139,10 @@
 	
 }
 @media only screen and (max-width: 980px) {
+	.main-banner__img-back {
+		-webkit-mask-image: none !important;
+		mask-image: none !important;
+	}
 	.main-banner__img{
 		display: block;
 		margin: 0 auto 30px auto;
@@ -150,6 +154,25 @@
 		width: 120px;
 		margin: 0 auto 70px auto;
 
+	}
+	.main-banner__contacts{
+		position: absolute;
+		bottom: 90px;
+		left: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		color: var(--color-ligth-blue);
+		font-size: 1.2rem;
+		text-transform: uppercase;
+	}
+	.main-banner__contacts-icon{
+		width: 64px;
+		height: 64px;
+	}
+	.main-banner__contacts-text{
+		margin: 0;
+		font-weight: 700;
 	}
 }
 

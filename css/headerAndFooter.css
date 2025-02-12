@@ -69,7 +69,8 @@ body.show-mobile .mobile-menu {
 
 .header {
 	width: 100%;
-	position: absolute
+    position: absolute;
+    z-index: 100;
 }
 
 .header__inner {
