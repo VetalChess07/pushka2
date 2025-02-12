@@ -6,6 +6,10 @@
 .how-buy__container {
     max-width: 1100px;
 }
+.how-buy__container h2 {
+	font-size: 2.5rem;
+	line-height: 2rem;
+}
 
 .main .how-buy__folder {
 	display: -webkit-box;
@@ -18,18 +22,41 @@
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-
+	position: relative;
 	
     /* z-index: 11; */
-	background-image:  url('../images/папка.svg');
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
+	
+
+	
+	
+}
+.main .how-buy__folders {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	
+	justify-content: space-between;
+	
+	align-items: center;
+	gap: 70px;
+}
+.how-buy__folder-back {
+	width: 100%;
+	height: 100%; 
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-position: center;
+	object-fit: contain;
 }
 
 
 .main .how-buy__folder {
-   max-width: 505px;
+ 
    width: 100%;
    min-height: 320px;
 }
@@ -38,33 +65,15 @@
 	background-color: var(--color-ligth-blue)
 }
 
-
-/* .main .how-buy__folder--ligth-blue .how-buy__folder-body::before {
-	content: "";
-	background-color: var(--color-ligth-blue);
-	position: absolute;
-	top: -1.875rem;
-	width: 50%;
-	height: 1.875rem;
-	border-radius: 0.9375rem 0.9375rem 0 0;
-    z-index: 12;
-    border-bottom: none;
-} */
-
-/* .main .how-buy__folder--ligth-blue .how-buy__folder-body::after {
-	content: "";
-	position: absolute;
-	top: -0.625rem;
-	right: 50%;
-	width: 1.25rem;
-	height: 1.25rem;
-	border-left: 0.625rem solid #d6efff;
-	border-bottom: 0.625rem solid #d6efff;
-	border-radius: 0 0 0 100%;
-	-webkit-transform: translate(50%, 0);
-	-ms-transform: translate(50%, 0);
-	transform: translate(50%, 0)
-} */
+.how-buy__folder-body {
+   display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+.how-buy__folder-item{
+	width: 80%;
+}
 
 .main .how-buy__folder--ligth-blue .how-buy__folder-ico {
 	border: 1px dashed #000
@@ -78,74 +87,28 @@
 	}
 }
 
-.main .how-buy__folders {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	gap: 3.125rem;
-	margin-bottom: 1.875rem
-}
 
-@media only screen and (min-width: 992px) {
-	.main .how-buy__folders {
-		margin-bottom: 3.75rem;
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-		-ms-flex-direction: row;
-		flex-direction: row
-	}
-}
 
-/* .main .how-buy__folder-body::before {
-	content: "";
-	border: 1px solid var(--color-blue);
-    border-bottom: none;
-	position: absolute;
-	top: -2.8125rem;
-	width: 50%;
-	height: 2.8125rem;
-	border-radius: 0.9375rem 0.9375rem 0 0;
-    z-index: 12;
-    background: var(--color-white);
-} */
 
-/* .main .how-buy__folder-body::after {
-	content: "";
-	position: absolute;
-	top: -0.625rem;
-	right: 50%;
-	width: 1.25rem;
-	height: 1.25rem;
-	border-left: 0.625rem solid #6795da;
-	border-bottom: 0.625rem solid #6795da;
-	border-radius: 0 0 0 100%;
-	-webkit-transform: translate(50%, 0);
-	-ms-transform: translate(50%, 0);
-	transform: translate(50%, 0)
-} */
 
-.how-buy__folder-item{
-    padding: 0 20px;
-}
 .main .how-buy__folder-title {
 	line-height: 1.5625rem;
 	font-weight: 400;
 	text-transform: uppercase;
 	color: var(--color-dark-gray);
     display: flex;
-    justify-content: space-between;
-    gap: 40px;
+    justify-content: start;
+    gap: 20px;
     align-items: center;
 }
-
+.how-buy__folder-title img {
+	width: 50px;
+	transform: translateY(-10px);
+}
 
 .how-buy__folder-title h6{
-	line-height: 3rem; 
-    font-size:2.5rem;
+	line-height: 2.2rem; 
+    font-size:2rem;
     font-weight: 600;
 }
 
@@ -153,12 +116,6 @@
 	color: var(--color-black)
 }
 
-@media only screen and (min-width: 992px) {
-	.main .how-buy__folder-title {
-		font-size: 2.25rem;
-		line-height: 2.625rem
-	}
-}
 
 .main .how-buy__folder-procent {
   
@@ -166,12 +123,12 @@
     font-weight: 400;
 	text-transform: uppercase;
 	text-align: right;
-    
+    margin-top: 20px;
 	color: var(--color-secondary)
 }
 .how-buy__folder-procent span {
-    font-size: 5rem;
-	line-height: 2.625rem;
+    font-size: 4rem;
+	line-height: 2rem;
 	font-weight: 500;
     color: var(--color-secondary)
 }
@@ -180,21 +137,6 @@
     justify-content:start;
     
 }
-/* 
-.main .how-buy__folder-procent--blue {
-	color: var(--color-blue)
-}
-
-.main .how-buy__folder-procent--yelloy {
-	color: var(--color-yelloy)
-} */
-
-/* @media only screen and (min-width: 992px) {
-	.main .how-buy__folder-procent {
-		font-size: 3.75rem;
-		line-height: 4.375rem
-	}
-} */
 
 .main .how-buy__folder-ico {
 	position: absolute;
@@ -206,12 +148,18 @@
 }
 
 @media only screen and (min-width: 992px) {
+	.main .how-buy__folder-title {
+		font-size: 2.25rem;
+		line-height: 2.625rem
+	}
 	.main .how-buy__folder-ico {
 		height: 2.75rem;
 		width: 2.75rem;
 		top: -0.625rem;
 		left: 1.5625rem
 	}
+
+
 }
 
 .main .how-buy__conditions {
@@ -265,8 +213,8 @@
 }
 .how-buy__folder-block h3{
     position: absolute;
-    right: 15%;
-    font-size: 5rem;
+    right: 10%;
+    font-size: 4rem;
     line-height: 2.625rem;
     font-weight: 500;
     bottom: -20px;
@@ -274,8 +222,8 @@
 }
 
 .how-buy__folder-text{
-    line-height: 2rem;
-    font-size: 2rem;
+    line-height: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 400;
    
     color: var(--color-dark-gray);
@@ -300,12 +248,6 @@
 	color: var(--color-white)
 }
 
-@media only screen and (min-width: 992px) {
-	.main .how-buy__conditions-item-title {
-		font-size: 1.5rem;
-		line-height: 2.0625rem
-	}
-}
 
 .main .how-buy__conditions-item-data {
 	font-size: 1.5rem;
@@ -315,20 +257,49 @@
 }
 
 @media only screen and (min-width: 992px) {
+	.main .how-buy__conditions-item-title {
+		font-size: 1.5rem;
+		line-height: 2.0625rem
+	}
 	.main .how-buy__conditions-item-data {
 		font-size: 2.25rem;
 		line-height: 3.125rem
 	}
 }
 @media only screen and (max-width: 980px) {
+	
+	.main .how-buy__folder {
+		justify-content: center;
+	}
+	
 	.main .how-buy__conditions-item-data {
 		font-size: 2.25rem;
 		line-height: 3.125rem
 	}
-    .main .how-buy__folders{
-        align-items: center;
-        gap: 70px;
-    }
+  
+}
+
+@media only screen and (max-width: 920px) {
+	.main .how-buy__folders {
+	
+		-ms-flex-direction: column;
+
+		
+		flex-direction: column;
+		
+        gap: 30px;
+	}
+	.main .how-buy__folder {
+		justify-content: center;
+	}
+	.how-buy__folder-item {
+		width: 50%;
+	}
+	.main .how-buy__conditions-item-data {
+		font-size: 2.25rem;
+		line-height: 3.125rem
+	}
+  
 }
 
 
@@ -353,27 +324,21 @@
 	.how-buy__folder-text {
 		font-size: 1.8rem;
 	}
-	.main .how-buy__folder-body::before {
-		top: -2rem;
-		height: 2rem;
-	}
+	
 	.main .how-buy__conditions-item {
 		padding: 8px 24px;
 	}
 
 }
 @media (max-width:580px) {
-	.main .how-buy__folder-body::before {
-		top: -1.2rem;
-		height: 1.2rem;	
-	}
+	
 	.main .how-buy__conditions-item {
 		width: 100%;
 		text-align: center;
 	}
 
 	.main .how-buy__folder {	
-    min-height: 250px;
+    min-height: 220px;
 	}
 	.how-buy__folder-title h6 {
 		font-size: 1.4rem;
@@ -386,14 +351,17 @@
 		line-height:1.2rem
 	}
 	.how-buy__folder-block h3 {
-		right: 20%;
-		font-size: 3rem;
+		right: 15%;
+		font-size: 2.5rem;
 		line-height: 2rem;
-		bottom: -20px;
+		bottom: -10px;
 	}
 	.how-buy__folder-title img {
 		width: 40px;
 		height: 40px;
+	}
+	.how-buy__folder-item{
+		width: 60%;
 	}
 }
 @media (max-width:400px) {

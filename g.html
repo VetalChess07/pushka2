@@ -4,31 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<link rel="stylesheet" href="./css/main.css">
-<body>
+    <link rel="stylesheet" href="./css/main.css">
+     <link rel="stylesheet" href="./css/main.css">
     <style>
-        img {
-            position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  /* background: url('your-image.jpg') center/cover no-repeat;
-   */
-  mask-image: url('./images/1.svg');
-  -webkit-mask-image: url('./images/1.svg');
+        .flex{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+           
+        }
+        .how-buy__folder {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 100vh; /* Блок растягивается на всю высоту экрана */
+            width: 100%; /* Блок растягивается на всю ширину */
+            overflow: hidden; /* Скрывает лишнее содержимое */
+        }
 
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
+        .how-buy__folder img {
+            width: 100%; /* Растягиваем картинку по ширине */
+            height: 100%; /* Растягиваем картинку по высоте */
+           /* Картинка растягивается, сохраняя пропорции */
+            position: absolute; /* Закрепляем изображение поверх текста */
+            top: 0;
+            left: 0;
+        }
 
-  mask-position: center;
-  -webkit-mask-position: center;
-
-  mask-size: cover;
-  -webkit-mask-size: cover;
+        .how-buy__folder div {
+            background: red;
+            position: relative;
+            z-index: 1; /* Текст будет поверх картинки */
+            padding: 20px;
+            color: white; /* Цвет текста */
+            max-width: 800px;
+            text-align: center;
+            font-size: 16px;
         }
     </style>
-    <img src="./images/banner.jpg" alt="">
+</head>
+<body>
+    <div class="flex">
+        <div class="main how-buy__folder">
+            <!-- Вставляем SVG как изображение -->
+            <img src="./images/папка.svg" alt="Folder">
+            
+            <!-- Текстовое содержимое поверх картинки -->
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quos libero amet ducimus voluptates debitis impedit nisi nihil alias veritatis, ut ratione aut, ex vero repellat officiis sit dignissimos. Eum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quos libero amet ducimus voluptates debitis impedit nisi nihil alias veritatis, ut ratione aut, ex vero repellat officiis sit dignissimos. Eum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quos libero amet ducimus voluptates debitis impedit nisi nihil alias veritatis, ut ratione aut, ex vero repellat officiis sit dignissimos. Eum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quos libero amet ducimus voluptates debitis impedit nisi nihil alias veritatis, ut ratione aut, ex vero repellat officiis sit dignissimos. Eum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quos libero amet ducimus voluptates debitis impedit nisi nihil alias veritatis, ut ratione aut, ex vero repellat officiis sit dignissimos. Eum.</p>
+
+            </div>
+        </div>
+        <div class="main how-buy__folder">
+            <!-- Вставляем SVG как изображение -->
+            <img src="./images/папка.svg" alt="Folder">
+            
+            <!-- Текстовое содержимое поверх картинки -->
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quos libero amet ducimus voluptates debitis impedit nisi nihil alias veritatis, ut ratione aut, ex vero repellat officiis sit dignissimos. Eum.</p>
+            </div>
+        </div>
+    </div>
+    <div class="main how-buy__folder">
+        <!-- Вставляем SVG как изображение -->
+        <img src="./images/папка.svg" alt="Folder">
+        
+        <!-- Текстовое содержимое поверх картинки -->
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quos libero amet ducimus voluptates debitis impedit nisi nihil alias veritatis, ut ratione aut, ex vero repellat officiis sit dignissimos. Eum.</p>
+        </div>
+    </div>
 </body>
 </html>
