@@ -142,8 +142,12 @@
 }
 @media only screen and (max-width: 980px) {
 	.main-banner__img-back {
+		height: 140dvh;
 		-webkit-mask-image: none !important;
 		mask-image: none !important;
+	}
+	.main .main-banner__inner{
+		height: 140dvh;
 	}
 	.main-banner__img{
 		display: block;
