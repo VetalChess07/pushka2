@@ -37,7 +37,13 @@ const swiper = new Swiper('.swiper', {
       visible.classList.add('active')
 
     }
-   
+
+    visible.addEventListener('click', () =>{
+      body.classList.remove('show-mobile')
+      body.classList.remove('lock-screen')
+      visible.classList.remove('active')
+      burger.classList.remove('active');
+    })
 
 
 });
